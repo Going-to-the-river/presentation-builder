@@ -112,8 +112,19 @@ export class App extends Component {
         event.preventDefault();
     }
 
-    generatePdf() {
+    generatePdf(){
+        var element = document.getElementById("content")
+        var width = element.children[0].offsetWidth
+        var height = element.children[0].offsetHeight
 
+        console.log(width)
+        var opt = {
+            filename:     'presentation.pdf',
+            image :       {type : 'jpeg'} ,
+            //html2canvas:  {width: width, height: height},
+            jsPDF:        {unit: 'px', format: [width+1, height+1], orientation: 'l'}
+        };
+        html2pdf().set(opt).from(element).toContainer().toCanvas().toImg().toPdf().save();
     }
 
     render() {

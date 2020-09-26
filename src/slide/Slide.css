@@ -22,6 +22,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;
+    page-break-after: always;
 }
 .mainTitle
 {

@@ -13,7 +13,7 @@ export class Content extends Component {
     }
     render() {
         return (
-          <div className="align-items-center">
+          <div id="content" className="align-items-center">
               <TitleSlide slideData={this.props.titleSlideData}/>
               <TeamInfoSlide slideData={this.props.teamSlideData} teamName={this.props.teamSlideData.projectTeamName}/>
               {this.props.slides.map(slideId => {
