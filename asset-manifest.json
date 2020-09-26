@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/presentation-builder/static/css/main.c12b3448.chunk.css",
+    "main.js": "/presentation-builder/static/js/main.d542e1c2.chunk.js",
+    "main.js.map": "/presentation-builder/static/js/main.d542e1c2.chunk.js.map",
+    "runtime-main.js": "/presentation-builder/static/js/runtime-main.7c3fa68e.js",
+    "runtime-main.js.map": "/presentation-builder/static/js/runtime-main.7c3fa68e.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/presentation-builder/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.7f6e3407.chunk.js": "/presentation-builder/static/js/2.7f6e3407.chunk.js",
+    "static/js/2.7f6e3407.chunk.js.map": "/presentation-builder/static/js/2.7f6e3407.chunk.js.map",
+    "index.html": "/presentation-builder/index.html",
+    "precache-manifest.eeb0070542c43a67eb42ae636f8d0376.js": "/presentation-builder/precache-manifest.eeb0070542c43a67eb42ae636f8d0376.js",
+    "service-worker.js": "/presentation-builder/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/presentation-builder/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.c12b3448.chunk.css.map": "/presentation-builder/static/css/main.c12b3448.chunk.css.map",
+    "static/js/2.7f6e3407.chunk.js.LICENSE.txt": "/presentation-builder/static/js/2.7f6e3407.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c3fa68e.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.7f6e3407.chunk.js",
+    "static/css/main.c12b3448.chunk.css",
+    "static/js/main.d542e1c2.chunk.js"
+  ]
+}
