@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Slide from "../slide/Slide";
 import {TitleSlide} from "../slide/TitleSlide";
 import {TeamInfoSlide} from "../slide/TeamInfoSlide";
+import './Content.css'
 
 export class Content extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ export class Content extends Component {
     }
     render() {
         return (
-          <div id="content" className="align-items-center">
+          <div id="content">
               <TitleSlide slideData={this.props.titleSlideData}/>
               <TeamInfoSlide slideData={this.props.teamSlideData} teamName={this.props.teamSlideData.projectTeamName}/>
               {this.props.slides.map(slideId => {

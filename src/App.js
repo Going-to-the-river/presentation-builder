@@ -4,6 +4,7 @@ import {Content} from "./content/Content";
 import {UserData} from "./forms/UserData";
 import {ProjectData} from "./forms/ProjectData";
 import {ImageUploader} from "./forms/ImageUploader";
+import html2pdf from 'html2pdf.js'
 
 export class App extends Component {
 
@@ -114,15 +115,16 @@ export class App extends Component {
 
     generatePdf(){
         var element = document.getElementById("content")
-        var width = element.children[0].offsetWidth
-        var height = element.children[0].offsetHeight
+        var width = element.children[0].clientWidth
+        var height = element.children[0].clientHeight
 
         console.log(width)
+        console.log(height)
         var opt = {
             filename:     'presentation.pdf',
-            image :       {type : 'jpeg'} ,
-            //html2canvas:  {width: width, height: height},
-            jsPDF:        {unit: 'px', format: [width+1, height+1], orientation: 'l'}
+            image :       {type : 'jpeg', quality: 1} ,
+            html2canvas:  {scale: 2},
+            jsPDF:        {unit: 'px', format: [width+289, height+152], orientation: 'l'}
         };
         html2pdf().set(opt).from(element).toContainer().toCanvas().toImg().toPdf().save();
     }
