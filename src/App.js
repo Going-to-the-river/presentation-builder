@@ -24,6 +24,7 @@ export class App extends Component {
             teamMemberCallbacks : []
         }
         this.newSlide = this.newSlide.bind(this);
+        this.deleteSlide = this.deleteSlide.bind(this);
         this.newMember = this.newMember.bind(this);
         this.deleteMember = this.deleteMember.bind(this);
         this.getUserData = this.getUserData.bind(this);
@@ -43,6 +44,17 @@ export class App extends Component {
                 slides: state.slides.concat([id])
             }
         })
+    }
+
+    deleteSlide () {
+        if (this.state.slides.length > 0) {
+            this.setState(state => {
+                state.slides.pop()
+                return {
+                    slides: state.slides,
+                }
+            })
+        }
     }
 
     newMember () {
@@ -144,8 +156,11 @@ export class App extends Component {
                     </div>
                 </form>
                 <div className="container-fluid align-items-center">
-                  <Content slides={this.state.slides} titleSlideData={this.state.projectData} teamSlideData={this.state.teamMembers}/>
-                  <button type="button" className="App-button" onClick={this.newSlide}>Add Slide</button>
+                    <Content slides={this.state.slides} titleSlideData={this.state.projectData} teamSlideData={this.state.teamMembers}/>
+                    <div className="row-cols-md-12">
+                        <button type="button" className="slide-button" onClick={this.newSlide}>Добавить Слайд</button>
+                        <button type="button" className="slide-button" onClick={this.deleteSlide}>Удалить последний Слайд</button>
+                    </div>
                 </div>
             </div>
         );

@@ -4,6 +4,7 @@ import Slide from "../slide/Slide";
 import {TitleSlide} from "../slide/TitleSlide";
 import {TeamInfoSlide} from "../slide/TeamInfoSlide";
 import './Content.css'
+import {FinalSlide} from "../slide/FinalSlide";
 
 export class Content extends Component {
     constructor(props) {
@@ -20,6 +21,7 @@ export class Content extends Component {
               {this.props.slides.map(slideId => {
                   return <Slide slideId={slideId}/>
               })}
+              <FinalSlide slideData={this.props.titleSlideData} />
           </div>
         );
     }
