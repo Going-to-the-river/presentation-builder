@@ -7,13 +7,15 @@ export class UserData extends Component {
             userData: {
                 memberName: '',
                 memberPosition: '',
-                memberAbout: ''
+                memberAbout: '',
+                memberEducation: ''
             }
         }
 
         this.memberNameChange = this.memberNameChange.bind(this);
         this.memberPositionChange = this.memberPositionChange.bind(this);
         this.memberAboutChange = this.memberAboutChange.bind(this);
+        this.memberEducationChange = this.memberEducationChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -27,6 +29,10 @@ export class UserData extends Component {
 
     memberAboutChange(event) {
         this.setState({memberAbout: event.target.value});
+    }
+
+    memberEducationChange(event) {
+        this.setState({memberEducation: event.target.value});
     }
 
     handleSubmit(event) {
@@ -58,6 +64,19 @@ export class UserData extends Component {
                         id="memberPosition"
                         value={this.state.memberPosition}
                         onChange={this.memberPositionChange}
+                        maxLength="30"
+                        required
+                    />
+                    <br/>
+
+                    <label htmlFor={"memberEducation" + this.props.userId}>Учебное заведение</label><br/>
+                    <input
+                        type="text"
+                        name={"memberEducation" + this.props.userId}
+                        placeholder="MIT"
+                        id="memberEducation"
+                        value={this.state.memberEducation}
+                        onChange={this.memberEducationChange}
                         maxLength="30"
                         required
                     />

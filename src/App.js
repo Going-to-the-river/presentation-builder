@@ -3,6 +3,7 @@ import './App.css';
 import {Content} from "./content/Content";
 import {UserData} from "./forms/UserData";
 import {ProjectData} from "./forms/ProjectData";
+import {ImageUploader} from "./forms/ImageUploader";
 
 export class App extends Component {
 
@@ -13,6 +14,7 @@ export class App extends Component {
             count : 0,
             projectData : {
                 projectName: '',
+                projectTeamName: '',
                 projectEmail: '',
                 projectPhone: '',
             },
@@ -87,6 +89,7 @@ export class App extends Component {
                     return <UserData userId={userId} dataGetter={this.getUserData}/>
                 })}
                 <button type="button" className="App-button" onClick={this.newSlide}>Add Slide</button>
+                {/*<ImageUploader />*/}
                 <Content slides={this.state.slides} titleSlideData={this.state.projectData} teamSlideData={this.state.teamMembers}/>
             </div>
         );

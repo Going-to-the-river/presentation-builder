@@ -6,12 +6,14 @@ export class ProjectData extends Component {
         this.state = {
             userData: {
                 projectName: '',
+                projectTeamName: '',
                 projectEmail: '',
                 projectPhone: '',
             }
         }
 
         this.projectNameChange = this.projectNameChange.bind(this);
+        this.projectTeamNameChange = this.projectTeamNameChange.bind(this);
         this.projectEmailChange = this.projectEmailChange.bind(this);
         this.projectPhoneChange = this.projectPhoneChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,6 +21,10 @@ export class ProjectData extends Component {
 
     projectNameChange(event) {
         this.setState({projectName: event.target.value});
+    }
+
+    projectTeamNameChange(event) {
+        this.setState({projectTeamName: event.target.value});
     }
 
     projectEmailChange(event) {
@@ -46,6 +52,18 @@ export class ProjectData extends Component {
                         id="projectName"
                         value={this.state.projectName}
                         onChange={this.projectNameChange}
+                        maxLength="30"
+                        required
+                    />
+                    <br/>
+                    <label htmlFor="projectTeamName">Название команды</label><br/>
+                    <input
+                        type="text"
+                        name="projectTeamName"
+                        placeholder="Название Команды"
+                        id="projectTeamName"
+                        value={this.state.projectTeamName}
+                        onChange={this.projectTeamNameChange}
                         maxLength="30"
                         required
                     />

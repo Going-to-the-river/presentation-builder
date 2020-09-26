@@ -13,11 +13,10 @@ export class Content extends Component {
     }
     render() {
         return (
-          <ul className="slides">
+          <div className="slides">
               <TitleSlide slideData={this.props.titleSlideData}/>
-              <TeamInfoSlide slideData={this.props.teamSlideData}/>
-
-          </ul>
+              <TeamInfoSlide slideData={this.props.teamSlideData} teamName={this.props.teamSlideData.projectTeamName}/>
+          </div>
         );
     }
 }

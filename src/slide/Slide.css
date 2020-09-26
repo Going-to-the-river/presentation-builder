@@ -2,3 +2,193 @@
     background: gray;
     padding: 10px 10px 10px 10px;
 }
+
+.Team-Title {
+    width:30%;
+    height: 10%;
+    margin-top: 2%;
+    margin-left: 3%;
+    float:left;
+    outline: 1px solid black;
+    background: lightgray;
+}
+
+.Slide
+{
+
+    width: 800px;
+    height: 450px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.mainTitle
+{
+    width:100%;
+    height: 5% ;
+    background: maroon;
+    outline: 1px solid black;
+
+}
+.subTitle
+{
+    width:20%;
+    height: 100%;
+    background: lightcoral;
+    float: left;
+    outline: 1px solid black;
+
+}
+
+.message
+{
+    width:94%;
+    height: 10% ;
+    margin-top: 12%;
+    margin-right: 3%;
+    margin-left: 3%;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.mainContent
+{
+    width:100%;
+    height: 80% ;
+
+}
+.ContentCellVert{
+    width:100%;
+    height: 46%;
+    padding: 2%;
+    background:lightcoral;
+    float:top;
+    outline: 1px solid black;
+
+}
+.ContentCellGor{
+
+    width:46%;
+    height: 100%;
+    padding: 2%;
+    background:lightcoral;
+    float:left;
+    outline: 1px solid black;
+}
+.footer
+{
+    width:100%;
+    height: 5% ;
+    background: blue;
+}
+.Logo_Titul
+{
+    width:20%;
+    height:20%;
+    margin-left: 3%;
+    margin-top: 2%;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.Title
+{
+    width: 50%;
+    height: 15%;
+    margin-left: 3%;
+    margin-top: 20%;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.TeamName
+{
+    width: 29.3%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.LeadMail
+{
+    width: 29.3%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.LeadPhone
+{
+    width: 29.3%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.Logo_sol
+{
+    width:15%;
+    height:15%;
+    margin-top: 2%;
+    margin-right: 3%;
+    float:right;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.Person
+{
+    width:100%;
+    height:80%;
+    float: left;
+}
+.photo
+{
+    width:96%;
+    height:40%;
+    margin-right: 2%;
+    margin-left: 2%;
+    outline: 1px solid black;
+    margin-right: 2%;
+    background: lightgray;
+}
+
+.Name
+{
+    width:100%;
+    height:10%;
+    margin-top: 1%;
+}
+.Info
+{
+    width:96%;
+    height:10%;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.About
+{
+    width:96%;
+    height:25%;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    outline: 1px solid black;
+    background: lightgray;
+}
+.Team
+{
+    display: flex;
+    justify-content: space-between;
+    width:94%;
+    height: 67%;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
