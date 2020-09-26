@@ -4,12 +4,10 @@ export class ProjectData extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userData: {
-                projectName: '',
-                projectTeamName: '',
-                projectEmail: '',
-                projectPhone: '',
-            }
+            projectName: '',
+            projectTeamName: '',
+            projectEmail: '',
+            projectPhone: ''
         }
 
         this.projectNameChange = this.projectNameChange.bind(this);

@@ -3,7 +3,6 @@ import './App.css';
 import {Content} from "./content/Content";
 import {UserData} from "./forms/UserData";
 import {ProjectData} from "./forms/ProjectData";
-import {ImageUploader} from "./forms/ImageUploader";
 import html2pdf from 'html2pdf.js'
 
 export class App extends Component {
@@ -71,18 +70,16 @@ export class App extends Component {
     }
 
     getUserData(id, userData) {
-        console.log(id)
-        console.log(userData)
         this.setState(state => {
             state.teamMembers[id] = userData
+            let newArray = state.teamMembers.concat([])
             return {
-                teamMembers: state.teamMembers
+                teamMembers: newArray
             }
         })
     }
 
     getProjectData(projectData) {
-        // console.log(projectData)
         this.setState(state => {
             return {
                 projectData: projectData
@@ -114,13 +111,11 @@ export class App extends Component {
     }
 
     generatePdf(){
-        var element = document.getElementById("content")
-        var width = element.children[0].clientWidth
-        var height = element.children[0].clientHeight
+        let element = document.getElementById("content")
+        let width = element.children[0].clientWidth
+        let height = element.children[0].clientHeight
 
-        console.log(width)
-        console.log(height)
-        var opt = {
+        let opt = {
             filename:     'presentation.pdf',
             image :       {type : 'jpeg', quality: 1} ,
             html2canvas:  {scale: 2},
@@ -148,7 +143,6 @@ export class App extends Component {
                         </div>
                     </div>
                 </form>
-                {/*<ImageUploader />*/}
                 <div className="container-fluid align-items-center">
                   <Content slides={this.state.slides} titleSlideData={this.state.projectData} teamSlideData={this.state.teamMembers}/>
                   <button type="button" className="App-button" onClick={this.newSlide}>Add Slide</button>

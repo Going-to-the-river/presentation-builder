@@ -4,12 +4,11 @@ export class UserData extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userData: {
-                memberName: '',
-                memberPosition: '',
-                memberAbout: '',
-                memberEducation: ''
-            }
+            memberName: '',
+            memberPosition: '',
+            memberAbout: '',
+            memberEducation: '',
+            memberPhoto: ''
         }
 
         this.memberNameChange = this.memberNameChange.bind(this);
@@ -17,6 +16,7 @@ export class UserData extends Component {
         this.memberAboutChange = this.memberAboutChange.bind(this);
         this.memberEducationChange = this.memberEducationChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.memberPhotoChange = this.memberPhotoChange.bind(this)
         this.props.callbackGetter(this.props.userId, this.handleSubmit)
     }
 
@@ -36,67 +36,86 @@ export class UserData extends Component {
         this.setState({memberEducation: event.target.value});
     }
 
+    memberPhotoChange(event) {
+        event.preventDefault()
+
+        let reader = new FileReader();
+        let file = event.target.files[0];
+
+        reader.onloadend = () => {
+            this.setState({
+                memberPhoto: reader.result
+            });
+        }
+
+        reader.readAsDataURL(file)
+    }
+
     handleSubmit() {
         this.props.dataGetter(this.props.userId, this.state)
-        // event.preventDefault();
     }
 
     render() {
         return (
             <div className="user-data">
-                    <label htmlFor={"memberName-" + this.props.userId}>Имя Фамилия</label><br/>
-                    <input
-                        type="text"
-                        className="input-form"
-                        name={"memberName-" + this.props.userId}
-                        placeholder="Иван Иванов"
-                        id="memberName"
-                        value={this.state.memberName}
-                        onChange={this.memberNameChange}
-                        maxLength="30"
-                        required
-                    />
-                    <br/>
-                    <label htmlFor={"memberPosition" + this.props.userId}>Должность</label><br/>
-                    <input
-                        type="text"
-                        className="input-form"
-                        name={"memberPosition" + this.props.userId}
-                        placeholder="Разработчик, Менеджер..."
-                        id="memberPosition"
-                        value={this.state.memberPosition}
-                        onChange={this.memberPositionChange}
-                        maxLength="30"
-                        required
-                    />
-                    <br/>
+                <label htmlFor={"memberPhoto-" + this.props.userId}>Фото</label><br/>
+                <input className="input-form"
+                       type="file"
+                       name={"memberPhoto-" + this.props.userId}
+                       id="memberPhoto"
+                       onChange={this.memberPhotoChange}
+                />
+                <label htmlFor={"memberName-" + this.props.userId}>Имя Фамилия</label><br/>
+                <input
+                    type="text"
+                    className="input-form"
+                    name={"memberName-" + this.props.userId}
+                    placeholder="Иван Иванов"
+                    id="memberName"
+                    value={this.state.memberName}
+                    onChange={this.memberNameChange}
+                    maxLength="30"
+                    required
+                />
+                <br/>
+                <label htmlFor={"memberPosition" + this.props.userId}>Должность</label><br/>
+                <input
+                    type="text"
+                    className="input-form"
+                    name={"memberPosition" + this.props.userId}
+                    placeholder="Разработчик, Менеджер..."
+                    id="memberPosition"
+                    value={this.state.memberPosition}
+                    onChange={this.memberPositionChange}
+                    maxLength="30"
+                    required
+                />
+                <br/>
 
-                    <label htmlFor={"memberEducation" + this.props.userId}>Учебное заведение</label><br/>
-                    <input
-                        type="text"
-                        className="input-form"
-                        name={"memberEducation" + this.props.userId}
-                        placeholder="MIT"
-                        id="memberEducation"
-                        value={this.state.memberEducation}
-                        onChange={this.memberEducationChange}
-                        maxLength="30"
-                        required
-                    />
-                    <br/>
+                <label htmlFor={"memberEducation" + this.props.userId}>Учебное заведение</label><br/>
+                <input
+                    type="text"
+                    className="input-form"
+                    name={"memberEducation" + this.props.userId}
+                    placeholder="MIT"
+                    id="memberEducation"
+                    value={this.state.memberEducation}
+                    onChange={this.memberEducationChange}
+                    maxLength="30"
+                    required
+                />
+                <br/>
 
-                    <label htmlFor={"memberAbout" + this.props.userId}>Дополнительная Информация</label><br/>
-                    <textarea
-                        name={"memberAbout" + this.props.userId}
-                        className="input-form"
-                        id="memberAbout"
-                        maxLength="100"
-                        value={this.state.memberAbout}
-                        onChange={this.memberAboutChange}
-                    />
-                    <br/>
-
-                    {/*<input type="submit" name="submit" value="Отправить"/>*/}
+                <label htmlFor={"memberAbout" + this.props.userId}>Дополнительная Информация</label><br/>
+                <textarea
+                    name={"memberAbout" + this.props.userId}
+                    className="input-form"
+                    id="memberAbout"
+                    maxLength="100"
+                    value={this.state.memberAbout}
+                    onChange={this.memberAboutChange}
+                />
+                <br/>
             </div>
         );
     }

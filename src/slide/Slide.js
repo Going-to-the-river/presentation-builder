@@ -8,9 +8,12 @@ export class Slide extends Component{
         super(props);
         this.state = {
             title : 'Название',
-            isEditingTitle : false,
+            isEditingTitle : true,
             content: 'content',
-            isEditingContent: false
+            isEditingContent: true,
+            image: '',
+            imageFile: '',
+            isEditingImage: true
         }
 
         this.showTitle = this.showTitle.bind(this)
@@ -22,28 +25,30 @@ export class Slide extends Component{
         this.showContentEditor = this.showContentEditor.bind(this)
         this.renderContent = this.renderContent.bind(this)
         this.prepareText = this.prepareText.bind(this)
+        this.showImage = this.showImage.bind(this)
+        this.showImageUploader = this.showImageUploader.bind(this)
+        this.photoChange = this.photoChange.bind(this)
+        this.renderImage = this.renderImage.bind(this)
     }
 
     showEditor(event) {
-        this.setState({isEditingTitle: false})
-    }
-
-    showTitle(event) {
         this.setState({isEditingTitle: true})
     }
 
+    showTitle(event) {
+        this.setState({isEditingTitle: false})
+    }
+
     showContentEditor(event) {
-        this.setState({isEditingContent: false})
+        this.setState({isEditingContent: true})
     }
 
     showContent(event) {
-        // if (event.keyCode === 13) {
-            this.setState({isEditingContent: true})
-        // }
+        this.setState({isEditingContent: false})
     }
 
     renderTitle() {
-        if (!this.state.isEditingTitle)
+        if (this.state.isEditingTitle)
         {
                 return <textarea
                     className="message"
@@ -59,7 +64,7 @@ export class Slide extends Component{
     }
 
     renderContent() {
-        if (!this.state.isEditingContent)
+        if (this.state.isEditingContent)
         {
             return <textarea
                 className="Team"
@@ -79,12 +84,10 @@ export class Slide extends Component{
     }
 
     contentChange(event) {
-        console.log(typeof event.target.value)
         this.setState({content: event.target.value})
     }
 
     prepareText(text) {
-        console.log(typeof text)
         return (<div>
             {text.split('\n').map(data => {
                 return <p>{data}</p>
@@ -92,13 +95,55 @@ export class Slide extends Component{
         </div>);
     }
 
+    showImage(event) {
+        this.setState({isEditingImage: false})
+    }
+
+    showImageUploader(event) {
+        this.setState({isEditingImage: true})
+    }
+
+    photoChange(event) {
+        event.preventDefault()
+
+        let reader = new FileReader();
+        let file = event.target.files[0];
+
+        reader.onloadend = () => {
+            this.setState({
+
+                image: reader.result
+            });
+        }
+
+        reader.readAsDataURL(file)
+    }
+
+    renderImage() {
+        if (this.state.isEditingImage)
+        {
+            return <div>
+                <input
+                       type="file"
+                       onChange={this.photoChange}
+                />
+                <input type="button" onClick={this.showImage} value="Показать картинку"/>
+            </div>
+        }
+        else
+        {
+            return <img className="slide-photo" onClick={this.showImageUploader} src={this.state.image} onChange={this.photoChange}/>
+        }
+    }
+
+
     render() {
         return (
         <div className="Slide" id={this.props.slideId}>
-            {/*<div className="TeamTitle">{this.props.teamName}</div>*/}
             <img className="Logo_sol" src={logo} />
             {this.renderTitle()}
             {this.renderContent()}
+            <div className="Team" >{this.renderImage()}</div>
         </div>
         );
 

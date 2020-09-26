@@ -22,6 +22,7 @@ export class TeamInfoSlide extends Component{
                                 memberPosition={data.memberPosition}
                                 memberEducation={data.memberEducation}
                                 memberAbout={data.memberAbout}
+                                memberPhoto={data.memberPhoto}
                             />
                         );
                     })}
