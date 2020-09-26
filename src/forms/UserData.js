@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import "./Forms.css"
 export class UserData extends Component {
     constructor(props) {
         super(props);
@@ -17,6 +17,7 @@ export class UserData extends Component {
         this.memberAboutChange = this.memberAboutChange.bind(this);
         this.memberEducationChange = this.memberEducationChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.props.callbackGetter(this.props.userId, this.handleSubmit)
     }
 
     memberNameChange(event) {
@@ -35,18 +36,18 @@ export class UserData extends Component {
         this.setState({memberEducation: event.target.value});
     }
 
-    handleSubmit(event) {
+    handleSubmit() {
         this.props.dataGetter(this.props.userId, this.state)
-        event.preventDefault();
+        // event.preventDefault();
     }
 
     render() {
         return (
-            <div>
-                    <form id="form" onSubmit={this.handleSubmit}>
+            <div className="user-data">
                     <label htmlFor={"memberName-" + this.props.userId}>Имя Фамилия</label><br/>
                     <input
                         type="text"
+                        className="input-form"
                         name={"memberName-" + this.props.userId}
                         placeholder="Иван Иванов"
                         id="memberName"
@@ -59,6 +60,7 @@ export class UserData extends Component {
                     <label htmlFor={"memberPosition" + this.props.userId}>Должность</label><br/>
                     <input
                         type="text"
+                        className="input-form"
                         name={"memberPosition" + this.props.userId}
                         placeholder="Разработчик, Менеджер..."
                         id="memberPosition"
@@ -72,6 +74,7 @@ export class UserData extends Component {
                     <label htmlFor={"memberEducation" + this.props.userId}>Учебное заведение</label><br/>
                     <input
                         type="text"
+                        className="input-form"
                         name={"memberEducation" + this.props.userId}
                         placeholder="MIT"
                         id="memberEducation"
@@ -85,6 +88,7 @@ export class UserData extends Component {
                     <label htmlFor={"memberAbout" + this.props.userId}>Дополнительная Информация</label><br/>
                     <textarea
                         name={"memberAbout" + this.props.userId}
+                        className="input-form"
                         id="memberAbout"
                         maxLength="100"
                         value={this.state.memberAbout}
@@ -92,8 +96,7 @@ export class UserData extends Component {
                     />
                     <br/>
 
-                    <input type="submit" name="submit" value="Отправить"/>
-                </form>
+                    {/*<input type="submit" name="submit" value="Отправить"/>*/}
             </div>
         );
     }

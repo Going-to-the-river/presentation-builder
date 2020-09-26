@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import './Slide.css';
 import {TeamMemberInfo} from "./TeamMemberInfo";
+import logo from "./logo2018.png"
 
 export class TeamInfoSlide extends Component{
     render() {
         return (
             <div className="Slide" /*id={this.props.slideId}*/>
-                <div className="TeamTitle">{this.props.teamName}</div>
-                <div className="Logo_sol">Лого</div>
-                <div className="message">Состав команды</div>
+                {/*<div className="TeamTitle">{this.props.teamName}</div>*/}
+                <img className="Logo_sol" src={logo} />
+                <div className="message"><h1>Состав команды</h1></div>
                 <div className="Team">
                 {/*<ul className="team-members-list">*/}
                     {this.props.slideData.map(data => {

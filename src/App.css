@@ -40,3 +40,16 @@
 .App-button {
 
 }
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-inputs {
+  height: 300px;
+}
+
+.content {
+  align-items: center;
+}

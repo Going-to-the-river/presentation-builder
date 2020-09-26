@@ -17,6 +17,8 @@ export class ProjectData extends Component {
         this.projectEmailChange = this.projectEmailChange.bind(this);
         this.projectPhoneChange = this.projectPhoneChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        this.props.callbackGetter(this.handleSubmit)
     }
 
     projectNameChange(event) {
@@ -35,17 +37,18 @@ export class ProjectData extends Component {
         this.setState({projectPhone: event.target.value});
     }
 
-    handleSubmit(event) {
+    handleSubmit() {
         this.props.dataGetter(this.state)
-        event.preventDefault();
+        // event.preventDefault();
     }
 
     render() {
         return (
-            <div>
-                <form id="form" onSubmit={this.handleSubmit}>
+            <div className="user-data">
+                {/*<form id="form" onSubmit={this.handleSubmit}>*/}
                     <label htmlFor="projectName">Название проекта</label><br/>
                     <input
+                        className="input-form"
                         type="text"
                         name="projectName"
                         placeholder="Название проекта"
@@ -59,6 +62,7 @@ export class ProjectData extends Component {
                     <label htmlFor="projectTeamName">Название команды</label><br/>
                     <input
                         type="text"
+                        className="input-form"
                         name="projectTeamName"
                         placeholder="Название Команды"
                         id="projectTeamName"
@@ -71,6 +75,7 @@ export class ProjectData extends Component {
                     <label htmlFor="projectEmail">Email</label><br/>
                     <input
                         type="email"
+                        className="input-form"
                         name="projectEmail"
                         placeholder="team_mail@example.com"
                         id="projectEmail"
@@ -83,6 +88,7 @@ export class ProjectData extends Component {
                     <label htmlFor="projectPhone">Телефон</label><br/>
                     <input
                         type="tel"
+                        className="input-form"
                         name="projectPhone"
                         id="projectPhone"
                         // pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
@@ -91,8 +97,8 @@ export class ProjectData extends Component {
                         required
                     />
                     <br/>
-                    <input type="submit" name="submit" value="Отправить"/>
-                </form>
+                    {/*<input type="submit" name="submit" value="Отправить"/>*/}
+                {/*</form>*/}
             </div>
         );
     }

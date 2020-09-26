@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Slide.css';
+import logo from "./logo2018.png"
 
 export class TitleSlide extends Component{
     constructor(props) {
@@ -45,9 +46,9 @@ export class TitleSlide extends Component{
 
     render() {
         return (
-            <div className="Slide">
-                <div className="Logo_Titul">Logo</div>
-                <div className="Title">{this.getProjectName()}</div>
+            <div className="Slide title-slide">
+                <img src={logo} className="Logo_Titul" />
+                <div className="Title"><h1>{this.getProjectName()}</h1></div>
                 <div className="TeamName">{this.getProjectTeamName()}</div>
                 <div className="LeadMail">{this.getProjectEmail()}</div>
                 <div className="LeadPhone">{this.getProjectPhone()}</div>
