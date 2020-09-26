@@ -118,9 +118,9 @@ export class App extends Component {
 
     render() {
         return (
-            <div className="align-items-center">
+            <div className="">
                 <form id="form" onSubmit={this.handleSubmit}>
-                    <div className="row">
+                    <div className="row menu">
                         <button className="App-button col-md-3" type="submit" name="submit">Генерировать</button>
                         <button type="button" className="App-button col-md-3" onClick={this.newMember}>Добавить Участника</button>
                         <button type="button" className="App-button col-md-3" onClick={this.deleteMember}>Удалить Участника</button>
