@@ -216,3 +216,15 @@
     margin-right: 3%;
     float: left;
 }
+
+.Content
+{
+    display: flex;
+    justify-content: space-between;
+    width:44%;
+    height: 67%;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+}

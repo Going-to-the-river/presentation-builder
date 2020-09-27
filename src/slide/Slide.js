@@ -67,7 +67,7 @@ export class Slide extends Component{
         if (this.state.isEditingContent)
         {
             return <textarea
-                className="Team"
+                className="Content"
                 value={this.state.content}
                 onChange={this.contentChange}
                 onBlur={this.showContent}
@@ -143,7 +143,7 @@ export class Slide extends Component{
             <img className="Logo_sol" src={logo} />
             {this.renderTitle()}
             {this.renderContent()}
-            <div className="Team" >{this.renderImage()}</div>
+            <div className="Content" >{this.renderImage()}</div>
         </div>
         );
 
