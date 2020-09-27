@@ -1,0 +1,269 @@
+.Slide
+{
+    width: 800px;
+    height: 450px;
+    border: 1px dashed black;
+    font-family:'PT Sans Narrow', arial ;
+}
+.Logo_sol
+{
+    height:10%;
+    margin-top: 1%;
+    margin-right: 3%;
+    float:right;
+
+}
+.litTitle
+{
+    width: 30%;
+    height: 5%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+
+}
+.litSubTitle
+{
+    width: 45%;
+    height: 5%;
+    float:left;
+    color:gray;
+    margin-left: 3%;
+    margin-top: 1%;
+    outline: 1px dashed black;
+}
+.message
+{
+    width:94%;
+    height: 10% ;
+    margin-top: 7%;
+    margin-right: 3%;
+    margin-left: 3%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.message1
+{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 40%;
+    margin-left: 3%;
+    outline: 1px dashed black;
+}
+.MainBody1
+{
+    width: 94%;
+    height: 65.5%;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.MainBody2
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 65.5%;
+    margin-left: 16%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.MainBody3
+{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 65.5%;
+    margin-left: 5%;
+    margin-top: 1%;
+    color:gray;
+
+}
+.Row1
+{
+    width:22%;
+    height:100%;
+    float: left;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Row2
+{
+    width:45%;
+    height:100%;
+    float: left;
+
+}
+.Row3
+{
+    width:50%;
+    height:100%;
+    float: left;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Row4
+{
+    width:52%;
+    height:100%;
+    float: left;
+    color:gray;
+}
+.Row5
+{
+    width:20%;
+    height:100%;
+    float: left;
+    color:gray;
+    outline: 1px dashed black;
+}
+
+.Content1
+{
+    width: 60%;
+    height: 100%;
+    float:left;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Content2
+{
+    width: 100%;
+    height: 50%;
+    float:right;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Content3
+{
+    width: 100%;
+    height: 49%;
+    float:right;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Content4
+{
+    width: 90%;
+    height: 20%;
+    margin:5% ;
+    color:gray;
+    text-align: center;
+    outline: 1px dashed black;
+}
+.Content5
+{
+    width: 100%;
+    height: 19%;
+    padding-top: 5%;
+    margin-top: 10%;
+    color:gray;
+    float:bottom;
+    text-align: center;
+    outline: 1px dashed black;
+}
+.Content6
+{
+    width: 100%;
+    height: 7%;
+    padding-top: 1%;
+    color:white;
+    text-align: center;
+    outline: 1px dashed black;
+    background: #0080C0;
+}
+.Content7
+{
+    width: 100%;
+    height: 10%;
+    padding-top: 5%;
+    color:gray;
+    text-align: center;
+    outline: 1px dashed black;
+}
+
+
+.Content8
+{
+    width: 100%;
+    height: 56%;
+    float:right;
+    margin-top: 5%;
+
+}
+.Content9
+{
+    width: 100%;
+    height: 60%;
+    padding-top: 22%;
+    color:gray;
+    text-align: center;
+}
+.Content10
+{
+    width: 97%;
+    height: 50%;
+    margin-left: 3%;
+    float:right;
+    color:gray;
+    outline: 1px dashed black;
+}
+.NumberSlide
+{
+    width: 4%;
+    height: 5%;
+    float:right;
+    margin-right: 3%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Conclusion1
+{
+    width:94%;
+    height:9% ;
+    float:left;
+    margin-top: 1%;
+    margin-left: 3%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.conteiner
+{
+    width: 39%;
+    height: 100%;
+    float:right;
+}
+.conteiner1
+{
+    width: 12%;
+    height: 53%;
+    margin-left: 3%;
+    margin-top: 8%;
+    float:left;
+
+}
+.icon
+{
+    width: 5%;
+    height: 45%;
+    margin-left: 3%;
+    padding-top: 1%;
+    float:left;
+    color:gray;
+    outline: 1px dashed black;
+}
+
+
+.swot
+{
+    width: 94%;
+    height: 10%;
+    margin-top: 1%;
+    margin-left: 3%;
+
+}

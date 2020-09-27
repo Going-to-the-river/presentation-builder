@@ -1,0 +1,361 @@
+
+.Slide
+{
+    width: 800px;
+    height: 450px;
+    border: 1px dashed black;
+    font-family:'PT Sans Narrow', arial ;
+}
+.Slide_fin
+{
+
+    width: 800px;
+    height: 450px;
+    border: 1px dashed black;
+    font-family:'PT Sans Narrow', arial ;
+    color:white;
+    background: #0080C0;
+}
+
+
+.message
+{
+    width:94%;
+    height: 10% ;
+    margin-top: 7%;
+    margin-right: 3%;
+    margin-left: 3%;
+    color:gray;
+    outline: 1px dashed black;
+
+}
+.message1
+{
+    width:70%;
+    height: 10% ;
+    margin-top: 1%;
+    margin-right: 3%;
+    text-align: inherit;
+    outline: 1px dashed black;
+    background: seagreen;
+    color:white;
+}
+.message2
+{
+    width:94%;
+    height: 20% ;
+    margin-top: 12%;
+    margin-right: 3%;
+    margin-left: 3%;
+    text-align: left;
+    outline: 1px dashed black;
+}
+.message3
+{
+    width:80%;
+    height: 30% ;
+    margin-top: 1%;
+    margin-right: 3%;
+    margin-left: 3%;
+    float: left;
+    outline: 1px dashed black;
+}
+.message4
+{
+    width:94%;
+    height: 15% ;
+    margin-top: 7%;
+    margin-right: 3%;
+    margin-left: 3%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.message5
+{
+    width:85%;
+    height: 90% ;
+    margin-top: 1%;
+    margin-left: 2%;
+    float: left;
+    outline: 1px dashed black;
+}
+
+.Logo_Titul
+{
+    height:20%;
+    margin-left: 3%;
+    margin-top: 2%;
+    background: #0080C0;
+
+}
+.Title
+{
+    width: 50%;
+    height: 15%;
+    margin-left: 3%;
+    margin-top: 20%;
+    color:white;
+    font-family:'PT Sans Narrow', arial ;
+    font-size: 48px;
+}
+.TeamName
+{
+    width: 50%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+
+
+}
+.LeadMail
+{
+    width: 15%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+
+
+}
+.LeadPhone
+{
+    width: 15%;
+    height: 10%;
+    margin-left: 3%;
+    margin-top: 5%;
+    float: left;
+
+
+}
+.Logo_sol
+{
+    height:10%;
+    margin-top: 1%;
+    margin-right: 3%;
+    float:right;
+
+}
+.Person
+{
+    width:15%;
+    height:100%;
+    float: left;
+}
+.photo
+{
+    width:100%;
+    height:35%;
+    outline: 1px dashed black;
+
+}
+
+.Name
+{
+    width:100%;
+    height:10%;
+    margin-top: 1%;
+}
+.Info
+{
+    width:100%;
+    height:7%;
+    margin-top: 3%;
+    outline: 1px dashed black;
+
+}
+.About
+{
+    width:100%;
+    height:12%;
+    margin-top: 2%;
+    outline: 1px dashed black;
+
+}
+.Team
+{
+    display: flex;
+    justify-content: space-between;
+    width:94%;
+    height: 67%;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.litTitle
+{
+    width: 30%;
+    height: 5%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+
+}
+.litSubTitle
+{
+    width: 45%;
+    height: 5%;
+    float:left;
+    color:gray;
+    margin-left: 3%;
+    margin-top: 1%;
+    outline: 1px dashed black;
+
+}
+.MainBody1
+{
+    width: 66%;
+    height: 65.5%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 1%;
+    outline: 1px dashed black;
+}
+.MainBody2
+{
+    width: 45.5%;
+    height: 54%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+}
+
+.MainBody3
+{
+    width: 94%;
+    height: 55%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Conclusion1
+{
+    width: 25%;
+    height: 65.5%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 1%;
+    color:gray;
+    text-align: center;
+    outline: 1px dashed black;
+}
+.Conclusion2
+{
+    width:94%;
+    height:9% ;
+    float:left;
+    margin-top: 1%;
+    margin-left: 3%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.footer
+{
+    width:45.5%;
+    height:10% ;
+    float:left;
+    margin-top: 1%;
+    margin-left: 3%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Content1
+{
+    width: 45.5%;
+    height: 46%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 2%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Content2
+{
+    width: 94%;
+    height: 42%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+}
+
+
+.Content3
+ {
+     width: 94%;
+     height: 10%;
+    color:gray;
+     margin-left: 3%;
+     margin-top: 2%;
+   <!--  outline: 1px dashed black;-->
+ }
+.Content4
+{
+    width: 94%;
+    height: 80%;
+    margin-left: 3%;
+    margin-top: 2%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Content5
+{
+    width: 29.3%;
+    height: 90%;
+    float:left;
+    margin-left: 3%;
+    margin-top: 2%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Content6
+{
+    width: 94%;
+    height: 75%;
+    margin-left: 3%;
+    margin-top: 2%;
+    color:gray;
+    <!--outline: 1px dashed black;-->
+}
+.Content7
+{
+    width: 100%;
+    height: 36%;
+
+    color:gray;
+}
+
+.NumberSlide
+{
+    width: 4%;
+    height: 5%;
+    float:right;
+    margin-right: 3%;
+    margin-top: 1%;
+    color:gray;
+    outline: 1px dashed black;
+}
+.Icon
+{
+    width:2em;
+    height: 2em;
+    margin-top: 2%;
+    margin-left: 2%;
+    float:left;
+    border: 1px dashed black;
+    line-height: 1.5em;
+    text-align: center;
+    border-radius: 50%;
+}
+.buf
+{
+    width:100%;
+    height: 50%;
+}

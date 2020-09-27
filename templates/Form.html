@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les1</title>
+</head>
+<body>
+<script type="text/javascript">
+    let person=
+        {
+            firstLastName:'',
+            email:'',
+            phone:'',
+            about:'',
+        }
+    function getInfo(form)
+    {
+        person.firstLastName=form.FirstLastName.value;
+        person.email=form.Email.value;
+        person.phone=form.Phone.value;
+        person.about=form.About.value;
+        console.log(person)
+    }
+</script>
+ <form action="" method="get"  name ="form" id="form">
+     <label for="FirstLastName">Имя Фамилия</label><br />
+     <input type="text" name="FirstLastName" placeholder="Иван Иванов" id ="FirstLastName" required><br />
+
+     <label for="Email">Email</label><br />
+     <input type="email" name="Email" placeholder="ivanov@mail.ru" id ="Email" required><br />
+
+     <label for="Phone">Телефон</label><br />
+     <input type="tel" name="Phone"  id ="Phone"  pattern="8 [0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"><br />
+
+     <label>О себе</label><br />
+     <textarea name="About" maxlength="100"></textarea> <br />
+
+     <input type="button" onclick="getInfo(document.getElementById('form'))" name="submit" value="Отправить"/>
+ </form>
+</body>
+</html>
